@@ -67,4 +67,4 @@ def main(args):
 
 
 # Take all arguments after command 'python3'
-main(sys.argv[1:])
+print(main(sys.argv[1:]))
