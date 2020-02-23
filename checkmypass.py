@@ -59,12 +59,13 @@ def main(args):
     for password in args:
         count = pwned_api_check(password)
         if count:
-            print(f'{password} was found {count} times...' +
-                  'you should change you password')
+            print(f'{[password]} was found {count} times...' +
+                  'you should probably change you password')
         else:
-            print(f'{password} was NOT FOUND. Carry on!')
+            print(f'{[password]} was NOT FOUND. Carry on!')
     return 'Done!'
 
 
-# Take all arguments after command 'python3'
-print(main(sys.argv[1:]))
+if __name__ == "__main__":
+    # Take all arguments after command 'python3' and exit program
+    sys.exit(main(sys.argv[1:]))
